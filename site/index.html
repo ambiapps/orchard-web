@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orchard</title>
+  <meta name="description" content="Orchard is a Mac app that watches a git branch and, whenever it moves, builds your app and installs it on the Macs, iPhones, iPads, Apple TVs, Vision Pros and simulators you choose.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#edf1ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121c16" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Orchard">
+  <meta property="og:description" content="Push to the branch. Orchard builds it and installs it on every device you test on.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top wrap">
+    <a class="brand" href="./" aria-label="Orchard home">
+      <img src="favicon.svg" alt="" width="28" height="28">
+      <span>Orchard</span>
+    </a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#install">Install</a>
+      <a href="https://github.com/ambiapps/orchard">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <h1>Push to the branch. It’s on every device.</h1>
+        <p class="lede">Orchard is a Mac app that watches a git branch. When it moves, Orchard builds your app and installs it on the Macs, iPhones, iPads, Apple&nbsp;TVs, Vision&nbsp;Pros and simulators you choose.</p>
+        <div class="actions">
+          <a class="button primary" href="#install">Install Orchard</a>
+          <a class="button" href="https://github.com/ambiapps/orchard">View the source</a>
+        </div>
+      </div>
+
+      <figure class="tree" aria-label="Example: a new commit on main is built and installed on five devices">
+        <div class="branch">
+          <span class="branch-name">main</span>
+          <span class="status" data-status>Watching</span>
+        </div>
+        <ol class="commits" data-commits>
+          <li><span class="fruit"></span><code>3be90d1</code><span class="msg">Tighten onboarding copy</span></li>
+          <li><span class="fruit"></span><code>e1c47a8</code><span class="msg">Add widget timeline</span></li>
+        </ol>
+        <ul class="devices" data-devices>
+          <li data-state="installed">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg>
+            <span class="name">MacBook Pro<small>This Mac</small></span>
+            <span class="state"></span>
+          </li>
+          <li data-state="installed">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 5h2"/></svg>
+            <span class="name">iPhone 17 Pro<small>iOS 27.0</small></span>
+            <span class="state"></span>
+          </li>
+          <li data-state="installed">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="2"/><path d="M11 19h2"/></svg>
+            <span class="name">iPad Pro<small>iPadOS 27.0</small></span>
+            <span class="state"></span>
+          </li>
+          <li data-state="installed">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5C3 8 5 7 12 7s9 1 9 3.5v2c0 2.5-1.6 4-3.6 4-1.6 0-2.4-.8-3.2-1.9-.6-.8-1.2-1.1-2.2-1.1s-1.6.3-2.2 1.1c-.8 1.1-1.6 1.9-3.2 1.9C4.6 16.5 3 15 3 12.5z"/></svg>
+            <span class="name">Apple Vision Pro<small>visionOS 27.0</small></span>
+            <span class="state"></span>
+          </li>
+          <li data-state="installed">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="sim"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 5h2"/></svg>
+            <span class="name">iPhone 17 simulator<small>Booted</small></span>
+            <span class="state"></span>
+          </li>
+        </ul>
+      </figure>
+    </section>
+
+    <section id="how" class="how wrap">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li>
+          <h3>Point it at a repo</h3>
+          <p>Choose a local clone, then pick the branch, project or workspace, scheme, configuration and the devices to install on.</p>
+        </li>
+        <li>
+          <h3>It watches the branch</h3>
+          <p>Orchard checks the branch head with <code>git ls-remote</code> on every poll. Nothing builds until there’s a new commit.</p>
+        </li>
+        <li>
+          <h3>It builds once per platform</h3>
+          <p>One <code>xcodebuild</code> per platform with automatic signing, so all your iPhones and iPads share a single build.</p>
+        </li>
+        <li>
+          <h3>It installs and launches</h3>
+          <p><code>devicectl</code> for devices, <code>simctl</code> for simulators, a relaunch for this Mac. Pick up any device and the latest build is already open.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="details wrap">
+      <h2>Stays out of your way</h2>
+      <dl>
+        <div>
+          <dt>Your checkout is never touched</dt>
+          <dd>Each pipeline builds in its own private <code>git worktree</code>. Orchard only runs <code>git fetch</code> in your clone.</dd>
+        </div>
+        <div>
+          <dt>Broken commits aren’t retried forever</dt>
+          <dd>A commit that fails waits for the next push, or for you to press Build &amp; Deploy Now.</dd>
+        </div>
+        <div>
+          <dt>Lives in the menu bar</dt>
+          <dd>Close the window and Orchard keeps watching.</dd>
+        </div>
+        <div>
+          <dt>Every run is logged</dt>
+          <dd>Full build and deploy logs for each pipeline are in <code>~/Library/Logs/Orchard</code>.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="install" class="install wrap">
+      <h2>Install</h2>
+      <p>Build Orchard from source. The script puts <code>Orchard.app</code> in <code>~/Applications</code>.</p>
+      <pre><code>git clone https://github.com/ambiapps/orchard.git
+cd orchard
+./scripts/build-app.sh --install</code></pre>
+      <h3>You’ll need</h3>
+      <ul class="needs">
+        <li>macOS 15 or later</li>
+        <li>Xcode, signed in to a developer account for installing on physical devices</li>
+        <li>Devices paired with Xcode, with Developer Mode on and registered in your team. Running once from Xcode registers them.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>Orchard is made by <a href="https://ambi.se">Ambi</a>.</p>
+  </footer>
+
+  <script src="tree.js" defer></script>
+</body>
+</html>

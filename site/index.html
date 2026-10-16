@@ -25,6 +25,7 @@
     </a>
     <nav>
       <a href="#how">How it works</a>
+      <a href="#example">Example</a>
       <a href="#install">Install</a>
       <a href="https://github.com/ambiapps/orchard">GitHub</a>
     </nav>
@@ -98,6 +99,51 @@
         <li>
           <h3>It installs and launches</h3>
           <p><code>devicectl</code> for devices, <code>simctl</code> for simulators, a relaunch for this Mac. Pick up any device and the latest build is already open.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="example" class="example wrap">
+      <div class="example-intro">
+        <h2>Example: test what your agents ship</h2>
+        <p>At Ambi, coding agents pick up tickets from our own ticket system, implement and test them, then push to our branch. Orchard watches that branch, so our devices always run the latest work and we write feedback as soon as we try something.</p>
+        <p>To set it up, make a pipeline for the branch your agents push to and turn on the devices you carry. If several commits land between polls, Orchard builds the newest one.</p>
+      </div>
+      <ol class="log">
+        <li>
+          <time>09:12</time>
+          <div>
+            <h3>You file a ticket</h3>
+            <p>“The toggle labels in Settings clip at the largest text size.”</p>
+          </div>
+        </li>
+        <li>
+          <time>09:14</time>
+          <div>
+            <h3>An agent picks it up</h3>
+            <p>It reproduces the bug, fixes the layout and runs the tests.</p>
+          </div>
+        </li>
+        <li data-kind="push">
+          <time>09:31</time>
+          <div>
+            <h3>The agent pushes to main</h3>
+            <p><code>4e1b0a7</code> Fix clipped toggle labels at large text sizes</p>
+          </div>
+        </li>
+        <li data-kind="install">
+          <time>09:33</time>
+          <div>
+            <h3>Orchard installs it</h3>
+            <p>Your iPhone, iPad and Vision Pro have the new build, already open.</p>
+          </div>
+        </li>
+        <li>
+          <time>09:40</time>
+          <div>
+            <h3>You write feedback</h3>
+            <p>“Fixed. The footer under the toggles wraps too.” That’s the next ticket, and the loop starts again.</p>
+          </div>
         </li>
       </ol>
     </section>

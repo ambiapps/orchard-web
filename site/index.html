@@ -6,21 +6,19 @@
   <title>Orchard</title>
   <meta name="description" content="Orchard is a Mac app that watches a git branch and, whenever it moves, builds your app and installs it on the Macs, iPhones, iPads, Apple TVs, Vision Pros and simulators you choose.">
   <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#edf1ee" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#121c16" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="Orchard">
   <meta property="og:description" content="Push to the branch. Orchard builds it and installs it on every device you test on.">
   <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="top wrap">
+  <header class="top">
+    <div class="wrap">
     <a class="brand" href="./" aria-label="Orchard home">
-      <img src="favicon.svg" alt="" width="28" height="28">
+      <img src="favicon.svg" alt="" width="20" height="20">
       <span>Orchard</span>
     </a>
     <nav>
@@ -29,16 +27,19 @@
       <a href="#install">Install</a>
       <a href="https://github.com/ambiapps/orchard">GitHub</a>
     </nav>
+    </div>
   </header>
 
   <main>
     <section class="hero wrap">
       <div class="hero-copy">
+        <img class="icon" src="favicon.svg" alt="" width="72" height="72">
+        <p class="eyebrow">Orchard for Mac</p>
         <h1>Push to the branch. It’s on every device.</h1>
         <p class="lede">Orchard is a Mac app that watches a git branch. When it moves, Orchard builds your app and installs it on the Macs, iPhones, iPads, Apple&nbsp;TVs, Vision&nbsp;Pros and simulators you choose.</p>
         <div class="actions">
           <a class="button primary" href="#install">Install Orchard</a>
-          <a class="button" href="https://github.com/ambiapps/orchard">View the source</a>
+          <a class="more" href="https://github.com/ambiapps/orchard">View the source</a>
         </div>
       </div>
 
@@ -81,8 +82,8 @@
       </figure>
     </section>
 
-    <section id="how" class="how wrap">
-      <h2>How it works</h2>
+    <section id="how" class="how band wrap">
+      <h2>How it works.</h2>
       <ol class="steps">
         <li>
           <h3>Point it at a repo</h3>
@@ -105,7 +106,8 @@
 
     <section id="example" class="example wrap">
       <div class="example-intro">
-        <h2>Example: test what your agents ship</h2>
+        <p class="eyebrow">Example</p>
+        <h2>Test what your agents ship.</h2>
         <p>At Ambi, coding agents pick up tickets from our own ticket system, implement and test them, then push to our branch. Orchard watches that branch, so our devices always run the latest work and we write feedback as soon as we try something.</p>
         <p>To set it up, make a pipeline for the branch your agents push to and turn on the devices you carry. If several commits land between polls, Orchard builds the newest one.</p>
       </div>
@@ -148,8 +150,8 @@
       </ol>
     </section>
 
-    <section class="details wrap">
-      <h2>Stays out of your way</h2>
+    <section class="details band wrap">
+      <h2>Stays out of your way.</h2>
       <dl>
         <div>
           <dt>Your checkout is never touched</dt>
@@ -171,7 +173,7 @@
     </section>
 
     <section id="install" class="install wrap">
-      <h2>Install</h2>
+      <h2>Install.</h2>
       <p>Build Orchard from source. The script puts <code>Orchard.app</code> in <code>~/Applications</code>.</p>
       <pre><code>git clone https://github.com/ambiapps/orchard.git
 cd orchard

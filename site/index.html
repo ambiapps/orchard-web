@@ -174,7 +174,12 @@
 
     <section id="install" class="install wrap">
       <h2>Install.</h2>
-      <p>Build Orchard from source. The script puts <code>Orchard.app</code> in <code>~/Applications</code>.</p>
+      <p>Download the latest build, open the DMG and drag Orchard to Applications.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/ambiapps/orchard/releases/latest">Download for Mac</a>
+      </div>
+      <p class="note">Orchard isn’t notarized yet. The first time you open it, allow it in System&nbsp;Settings › Privacy&nbsp;&amp;&nbsp;Security › Open&nbsp;Anyway.</p>
+      <p>Or build it from source. The script puts <code>Orchard.app</code> in <code>~/Applications</code>.</p>
       <pre><code>git clone https://github.com/ambiapps/orchard.git
 cd orchard
 ./scripts/build-app.sh --install</code></pre>

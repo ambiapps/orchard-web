@@ -118,6 +118,7 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 600; }
   font-size: 1.0625rem;
 }
 .brand:hover { text-decoration: none; }
+.brand img { display: block; }
 
 .top nav { display: flex; gap: 28px; font-size: 0.75rem; letter-spacing: -0.01em; }
 .top nav a { color: var(--ink); opacity: 0.8; }
@@ -130,12 +131,10 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 600; }
 .hero-copy { display: flex; flex-direction: column; align-items: center; }
 
 .icon {
+  display: block;
   width: 72px;
   height: 72px;
-  padding: 12px;
   margin-bottom: 20px;
-  background: var(--surface);
-  border-radius: 18px;
 }
 
 .eyebrow {

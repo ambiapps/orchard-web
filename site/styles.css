@@ -459,8 +459,23 @@ h3 { font-size: 1.1875rem; line-height: 1.26; letter-spacing: 0.01em; }
 
 .install { display: flex; flex-direction: column; align-items: center; }
 .install > p { margin: 20px 0 0; max-width: 34em; text-align: center; font-size: 1.1875rem; }
-.install > p.note { margin-top: 16px; font-size: 0.9375rem; }
-.install > .actions + .note + p { margin-top: 48px; }
+.install > .first-launch + p { margin-top: 48px; }
+
+.first-launch {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 48px;
+  padding: 24px 28px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  color: var(--muted);
+}
+.first-launch h3 { color: var(--ink); }
+.first-launch p { margin: 8px 0 0; }
+.first-launch ol { margin: 12px 0 0; padding-left: 1.2em; }
+.first-launch li + li { margin-top: 6px; }
+.first-launch strong { color: var(--ink); font-weight: 600; }
+.first-launch ol + p { margin-top: 16px; }
 
 .install pre {
   width: 100%;
@@ -506,6 +521,7 @@ footer p { margin: 0; padding-top: 16px; border-top: 1px solid var(--line); }
   .example-intro p, .install > p { text-align: left; }
   .install > .actions { align-self: stretch; justify-content: flex-start; }
   .install pre { margin: 36px 0 48px; padding: 20px; border-radius: 16px; }
+  .first-launch { margin-top: 36px; padding: 20px; border-radius: 16px; }
   .log { margin-top: 56px; }
   .log li { grid-template-columns: 3rem 10px minmax(0, 1fr); gap: 0 14px; }
   .log li::after { left: calc(3rem + 14px + 4px); }

@@ -181,7 +181,17 @@
       <div class="actions">
         <a class="button primary" href="https://github.com/ambiapps/orchard/releases/latest">Download for Mac</a>
       </div>
-      <p class="note">Orchard isn’t notarized yet. The first time you open it, allow it in System&nbsp;Settings › Privacy&nbsp;&amp;&nbsp;Security › Open&nbsp;Anyway.</p>
+      <div class="first-launch">
+        <h3>Opening it the first time</h3>
+        <p>Orchard isn’t notarized by Apple yet, so macOS blocks the first launch. You allow it once:</p>
+        <ol>
+          <li>Open Orchard from Applications. macOS says it can’t verify the app. Click <strong>Done</strong>.</li>
+          <li>Open System&nbsp;Settings › Privacy&nbsp;&amp;&nbsp;Security and scroll down to <strong>Security</strong>.</li>
+          <li>Next to “Orchard was blocked to protect your Mac”, click <strong>Open&nbsp;Anyway</strong>.</li>
+          <li>Click <strong>Open&nbsp;Anyway</strong> again and confirm with your password or Touch&nbsp;ID.</li>
+        </ol>
+        <p>After that it opens normally.</p>
+      </div>
       <p>Or build it from source. The script puts <code>Orchard.app</code> in <code>~/Applications</code>.</p>
       <pre><code>git clone https://github.com/ambiapps/orchard.git
 cd orchard

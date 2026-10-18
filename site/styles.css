@@ -459,6 +459,8 @@ h3 { font-size: 1.1875rem; line-height: 1.26; letter-spacing: 0.01em; }
 
 .install { display: flex; flex-direction: column; align-items: center; }
 .install > p { margin: 20px 0 0; max-width: 34em; text-align: center; font-size: 1.1875rem; }
+.install > p.note { margin-top: 16px; font-size: 0.9375rem; }
+.install > .actions + .note + p { margin-top: 48px; }
 
 .install pre {
   width: 100%;
@@ -502,6 +504,7 @@ footer p { margin: 0; padding-top: 16px; border-top: 1px solid var(--line); }
   .how, .example, .details, .install { padding-block: 80px; }
   .steps, .details dl { margin-top: 48px; gap: 36px; }
   .example-intro p, .install > p { text-align: left; }
+  .install > .actions { align-self: stretch; justify-content: flex-start; }
   .install pre { margin: 36px 0 48px; padding: 20px; border-radius: 16px; }
   .log { margin-top: 56px; }
   .log li { grid-template-columns: 3rem 10px minmax(0, 1fr); gap: 0 14px; }

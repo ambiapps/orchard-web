@@ -11,14 +11,14 @@
   <meta property="og:title" content="Orchard">
   <meta property="og:description" content="Push to the branch. Orchard builds it and installs it on every device you test on.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="top">
     <div class="wrap">
     <a class="brand" href="./" aria-label="Orchard home">
-      <img src="favicon.svg" alt="" width="20" height="20">
+      <img src="app-icon.png" alt="" width="20" height="20">
       <span>Orchard</span>
     </a>
     <nav>
@@ -33,7 +33,10 @@
   <main>
     <section class="hero wrap">
       <div class="hero-copy">
-        <img class="icon" src="favicon.svg" alt="" width="72" height="72">
+        <picture>
+          <source srcset="app-icon-dark.png" media="(prefers-color-scheme: dark)">
+          <img class="icon" src="app-icon.png" alt="" width="72" height="72">
+        </picture>
         <p class="eyebrow">Orchard for Mac</p>
         <h1>Push to the branch. It’s on every device.</h1>
         <p class="lede">Orchard is a Mac app that watches a git branch. When it moves, Orchard builds your app and installs it on the Macs, iPhones, iPads, Apple&nbsp;TVs, Vision&nbsp;Pros and simulators you choose.</p>

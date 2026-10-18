@@ -476,8 +476,6 @@ h3 { font-size: 1.1875rem; line-height: 1.26; letter-spacing: 0.01em; }
 .first-launch li + li { margin-top: 6px; }
 .first-launch strong { color: var(--ink); font-weight: 600; }
 .first-launch ol + p { margin-top: 16px; }
-.install .first-launch pre { margin: 12px 0 0; padding: 14px 18px; border-radius: 12px; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
-.install .first-launch pre code { font-size: 0.82rem; color: var(--ink); }
 
 .install pre {
   width: 100%;

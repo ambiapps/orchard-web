@@ -113,6 +113,7 @@
         <h2>Test what your agents ship.</h2>
         <p>At Ambi, coding agents pick up tickets from our own ticket system, implement and test them, then push to our branch. Orchard watches that branch, so our devices always run the latest work and we write feedback as soon as we try something.</p>
         <p>To set it up, make a pipeline for the branch your agents push to and turn on the devices you carry. If several commits land between polls, Orchard builds the newest one.</p>
+        <p>Running Orchard on a Mac nobody sits at? Turn on <strong>Set up connected devices automatically</strong>. Plug a phone in, unlock it and tap Trust, then unplug it: Orchard pairs it, registers it and deploys to it over Wi-Fi from then on.</p>
       </div>
       <ol class="log">
         <li>
@@ -200,7 +201,7 @@ cd orchard
       <ul class="needs">
         <li>macOS 15 or later</li>
         <li>Xcode, signed in to a developer account for installing on physical devices</li>
-        <li>Devices paired with Xcode, with Developer Mode on and registered in your team. Running once from Xcode registers them.</li>
+        <li>Devices paired with Xcode, with Developer Mode on and registered in your team. Running once from Xcode registers them, or Orchard pairs and registers them itself with automatic setup on.</li>
       </ul>
     </section>
   </main>
